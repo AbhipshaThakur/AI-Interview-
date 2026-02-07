@@ -1,0 +1,138 @@
+/* ---------- GLOBAL ---------- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ---------- BACKGROUND ---------- */
+.app-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e3a8a, #020617);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- CARD ---------- */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 420px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- TEXT ---------- */
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #cbd5f5;
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  color: #e0e7ff;
+}
+
+.question-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* ---------- SCORE ---------- */
+.score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #a78bfa, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+}
+
+/* ---------- BUTTON ---------- */
+.primary-btn {
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  border: none;
+  color: black;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.8);
+}
+
+.primary-btn.listening {
+  animation: pulse 1.2s infinite;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-in {
+  animation: slideUp 0.7s ease forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(34, 211, 238, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+  }
+}
